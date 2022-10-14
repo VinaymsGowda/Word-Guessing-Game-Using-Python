@@ -39,14 +39,14 @@ if word==final:
     print("You Guessed the Word correctly !! ")
     print(f"The Word was is {final}")
     print(f"The Number Of attempts Taken is {attempt}")
-    with open("highscoreofWG.txt","r") as f:
+    with open("highsco.txt","r") as f:
         high=int(f.read())
         if(high==0):
-            with open("highscoreofWG.txt","w") as f:
+            with open("highsco.txt","w") as f:
                 f.write(str(attempt))                                   #typecasted to str bcoz we cannot append a integer into file
                 print(f"HighScore of {attempt} has been created by {name}")
         elif(attempt<high):
-            with open("highscoreofWG.txt","w") as f:
+            with open("highsco.txt","w") as f:
                 f.write(str(attempt))                                   #typecasted to str bcoz we cannot append a integer into file
                 print(f"HighScore of {attempt} has been created by {name}")
 
